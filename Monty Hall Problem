@@ -1,0 +1,20 @@
+# Monty Hall Problem
+index<-0
+#circulation to be added
+box<-c(FALSE , FALSE , FALSE)
+box[sample(1:3,1)]<-TRUE
+client<-sample(1:3,1)
+selected<-box
+selected[client]<-TRUE
+a<-c()
+for (i in 1:3)
+  if (selected[i]<-FALSE)
+      a<-append(a,i)
+host<-sample(a)
+verify<-sample(c(0,1),1)
+if (verify == 0) # choose not to verify
+  if (box[client]==TRUE)
+    index<-index+1
+if (verify == 1)
+  if (box[c(-client,-host)]==TRUE)
+    index<- index+!
